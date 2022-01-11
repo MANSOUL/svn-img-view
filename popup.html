@@ -1,0 +1,66 @@
+<!--
+ * @Author: kuanggf
+ * @Date: 2022-01-11 11:33:32
+ * @LastEditors: kuanggf
+ * @LastEditTime: 2022-01-11 14:36:06
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVN 图片预览</title>
+  <style>
+    .container {
+      padding: 10px;
+    }
+    .flex {
+      width: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .flex span {
+      flex-shrink: 0;
+      user-select: none;
+    }
+    .checkbox {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: #bbb;
+      cursor: pointer;
+    }
+    .checkbox__dot {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #333;
+      transition: all .2s;
+    }
+    .checkbox__dot--on {
+      transform: translateX(20px);
+      background-color: #f378ab;
+    }
+  </style>
+</head>
+<body>
+  <div id="log"></div>
+  <div class="container">
+    <p class="flex">
+      <span>开启预览</span> 
+      <span class="checkbox" id="checkbox">
+        <i class="checkbox__dot checkbox__dot" id="checkbox__dot"></i>
+      </span>
+    </p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
